@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProducerConsumer</title>
+<!-- logo here -->
+<link class="logo2 "rel="icon" type="image/png" href="images/logo_copy.png">
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+
+
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  
+</head>
+<body>
+<div class="container-fluid" id="wrapper">
+  <nav class="navbar navbar-default">
+    <div class="container">
+   
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+        <a class="navbar-brand" href="#">ProducerConsumer</a></div>
+      
+      <div class="collapse navbar-collapse" id="defaultNavbar1">
+<ul class="nav navbar-nav navbar-right">
+      <li><a href="https://github.com/antonio176">GitHub</a></li> 
+  
+ 
+</ul>
+      </div>
+     
+    </div>
+   
+  </nav>
+  <section class="hero" id="hero">
+
+    </section>
+  
+    <article id="main">
+    <h1>Problem Overview</h1>
+    <p>The ProducerConsumer problem is an implementation of two threads producer and consumer where it uses two queues in two different ways accessing these queues.</p>
+    <p>One of the solutions that I used in this project was where the producer has its own queue but the consumer can consume from both queues. The second solution was where each of the consumers has its own queue and the producer could produce from both queues but chooses the shortest size queue of either queue.</p>
+    <p>In this project I made a comparison with these two solutions to get the average time for when a producer thread produces an item and the consumer thread waits in the queue these comparison determines which of the two solutions its better to solve the ProducerConsumer problem.</p>
+  </article>
+  
+  <article id="main">
+    <h1>Interesting Implementations  &  Difficulties</h1>
+    <p>In the project I came up with an algorithm where I can compute the averages of when the producer produces time stamps to the queue and when the consumer waits on the queue this algorithm was implemented in a method where it will be called on the producer and consumer thread. A difficulty that I had encountered was where I had to create an implementation so that the producer or the consumer chooses from either queues.</p>
+  </article>
+  <article id="main">
+    <h1>Results & Analysis</h1>
+    <p>To get the results I needed I compared both solutions by setting test sizes to 2producers/2consumer, and 1producer/1consumer. The results I got from my first solution was that the producers were finishing faster than the consumer threads while in the second solution it was the same as well. But in the second solution the producer and consumer threads were running much faster than the first solution. This says that the second solution where each consumer has its own queue, and the producers can produce in either queue by choosing the shortest one, is the best solution for the problem.</p>
+  </article>
+  <div id="main3">
+     
+      <img id="graph1" src="images/Graph1.png" alt="" align="middle" style="width:600px;height:300px;">
+      
+      <p></p> 
+  </div>
+  <div id="main4">
+      <img id="graph2" src="images/Graph2.png" alt="" align="middle" style="width:600px;height:300px;">
+      <p></p>
+  </div>
+  <!-- Citations if used 
+  <article id="main2">
+    <h1>Citations</h1>
+    <p></p>
+  </article> -->
+  
+  <article id="main2">
+    <h1>Project Created By</h1>
+    <p>Antonio Peralta at the City University of New York Lehman College</p>
+  </article>
+  
+
+<footer>Copyright &copy; 2016 ProducerConsumer</footer>
+</div>
+
+<script src="js/jquery-1.11.2.min.js"></script>
+
+<script src="js/bootstrap.js"></script>
+</body>
+</html>
